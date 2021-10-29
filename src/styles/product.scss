@@ -1,0 +1,141 @@
+.product-container {
+    display: flex;
+    margin: 20px;
+    margin-bottom: 10%;
+
+    .img-container {
+        width: 67%;
+        border-radius: 15px;
+        background-color: #f9f9f9;
+        .img-product {
+            width: 90%;
+        }
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        color: #3a3a3a;
+        width: 25%;
+
+        // .info-container input {
+        //     background-color: #eeeeee;
+        //     font-weight: 600;
+        //     border: none;
+        //     border-radius: 15px;
+        //     height: 33px;
+        //     margin: 10px;
+        //     padding: 0px 15px 0px 15px;
+        // }
+
+        // .info-container input:focus {
+        //     outline: none;
+        // }
+        
+        .info-container_select {
+            background-color: #eeeeee;
+            font-weight: 600;
+            border: none;
+            border-radius: 15px;
+            height: 33px;
+            margin-top: 10px;
+            padding: 0px 15px 0px 15px;
+        }
+        
+        .info-container_select:focus {
+            outline: none;
+        }
+
+        .button {
+            background-color: #418fde;
+            color: #f4f5f5;
+            font-weight: 600;
+            font-size: 15px;
+            border:none;
+            border-radius: 12px;
+            padding: 6px 25px;
+            cursor: pointer;
+            margin-top: 10%;
+            height: 7%;
+            outline: none;
+        
+        }
+    }
+}
+
+//loading
+.lds-dual-ring_container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid rgb(201, 201, 201);
+        border-color: rgb(202, 202, 202) transparent rgb(201, 201, 201) transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+}
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+//slider
+.slider {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider__content,
+.slider__content--item {
+	width: 100%;
+	position: relative;
+}
+
+.slider__content--item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-prev:before, .carousel-next:before {
+        width: 70%;
+    }
+    .product-container {
+        flex-direction: column;
+        .info-container {
+            font-size: 12px;
+            margin-left: 0%;
+            width: 100%;
+
+            .button {
+                padding: 10px 25px;
+                margin-top: 7%;
+            }
+        }
+        .img-container {
+            height: 60%;
+            width: 100%;
+        }
+    }
+}

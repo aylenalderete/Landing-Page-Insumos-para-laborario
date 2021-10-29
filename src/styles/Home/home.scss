@@ -1,0 +1,246 @@
+.homeContainer {
+
+    .home-title2 {
+        font-size: 1.7rem;
+        color: #272727;
+        font-weight: 600;
+        margin: 0px;
+        letter-spacing: 2px;
+        text-decoration: underline;
+        text-decoration-color: #4BD2DC;
+    }
+    .homeContainer-img2 {
+        display: none;
+        background-image: url("../../assets/Group 6 (copia).png");
+        .button {
+            background-color: #4BD2DC;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 18px;
+            border:none;
+            border-radius: 13px;
+            padding: 6px 25px;
+            cursor: pointer;
+            height: 10%;
+            outline: none;
+        
+        }
+    }
+    .homeContainer-img {
+        width: 100vw;
+        display: flex;
+        text-align: center;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 857px;
+        letter-spacing: 2px;
+        background-image: url("../../assets/Group 6.png");
+
+        .button {
+            background-color: #4BD2DC;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 18px;
+            border:none;
+            border-radius: 13px;
+            padding: 6px 25px;
+            cursor: pointer;
+            height: 10%;
+            outline: none;
+        
+        }
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7%;
+        text-align: center;
+
+        .home-title {
+            font-size: 1rem;
+            color: #777777;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .home-title2 {
+            font-size: 1.7rem;
+            color: #272727;
+            font-weight: 600;
+            margin-top: 0px;
+            margin-bottom: 3%;
+            text-decoration: underline;
+            text-decoration-color: #4BD2DC;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            .map-container {
+                width: 50%;
+                height: 400px;
+                text-align: center;
+                iframe {
+                    max-width: 100%;
+                    height: 100%;
+                   }
+            }
+            .map-container2 {
+                display: none;
+            }
+        }
+
+        .card-info {
+            width: 75%;
+            text-align: center;
+
+            .icon {
+                color:#4BD2DC;
+                font-size: 40px;
+            }
+
+            .card-description {
+                font-size: 1.1rem;
+                color: #838383;
+            }
+
+            .card-title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: #272727;
+
+            }
+        }
+
+        .home-productsList_container{
+            width: 100%;
+        }
+
+        .button {
+            background-color: #4BD2DC;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 18px;
+            border:none;
+            border-radius: 12px;
+            padding: 6px 25px;
+            cursor: pointer;
+            height: 35px;
+            outline: none;
+        
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .homeContainer {
+        .homeContainer-img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 1237px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .homeContainer {
+        .homeContainer-img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 31rem;
+        }
+        .cards-container {
+            .contact-container {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 5%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                .map-container {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homeContainer {
+        .homeContainer-img2 {
+            display: flex;
+            height: 31rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+        }
+        .homeContainer-img{
+            display: none;
+        }
+        .cards-container {
+            .contact-container {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 5%;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                .map-container {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .homeContainer {
+    
+    .homeContainer-img2 {
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-size: 12px;
+        display: flex;
+        height: 26rem;
+        .button {
+            font-size: 12px;
+        }
+    }
+    .cards-container {
+        .contact-container {
+            .info-container {
+                width: 60%;
+            }
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+.homeContainer .homeContainer-img2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    display: flex;
+    height: 18rem;
+    .button {
+        font-size: 12px;
+    }
+}
+}
