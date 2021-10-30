@@ -55,7 +55,7 @@ const Layout = ({
             <WhatsappButton />
             </div>
             <footer className='layout__footer'>
-                    <p style={{color:'white'}}>2021 © Hecho por: </p>
+                    <p style={{color:'white'}}>2021 © Hecho por: <a style={{color:'white', textDecoration: 'underline'}} rel='noreferrer' target="_blank" href='https://www.linkedin.com/in/aylenalderete/'>Aylén Alderete</a> </p>
             </footer>
         </main>
     )

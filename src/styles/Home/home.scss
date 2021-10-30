@@ -27,7 +27,7 @@
         }
     }
     .homeContainer-img {
-        width: 100vw;
+        width: 100%;
         display: flex;
         text-align: center;
         color: white;
@@ -35,7 +35,7 @@
         align-items: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 857px;
+        height: 650px;
         letter-spacing: 2px;
         background-image: url("../../assets/Group 6.png");
 
@@ -217,7 +217,7 @@
         background-repeat: no-repeat;
         font-size: 12px;
         display: flex;
-        height: 26rem;
+        height: 27rem;
         .button {
             font-size: 12px;
         }
@@ -234,7 +234,7 @@
 
 @media only screen and (max-width: 425px) {
 .homeContainer .homeContainer-img2 {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     font-size: 11px;
     display: flex;
