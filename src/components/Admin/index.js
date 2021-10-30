@@ -1,6 +1,5 @@
 import Layout, { Grid } from "../GeneralComponents/layout";
 import adminSlider from '../../assets/Group 6 (copia2).png'
-import image33 from "../../assets/image 33.png"
 import ProductForm from "./createProduct";
 import DeleteProduct from "./deleteProduct";
 import Card from "../GeneralComponents/card";

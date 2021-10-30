@@ -17,8 +17,12 @@ function Home() {
             return 3
         } else if (window.screen.width < 850){
             return 4
-        } else {
+        } else if (window.screen.width <= 1130){
             return 6
+        } else if (window.screen.width <= 1420){
+            return 8
+        } else {
+            return 10
         }
     }
 
@@ -73,7 +77,7 @@ function Home() {
                             }} className="button">Ver {showAllProducts ? 'menos': 'más'} productos</button>
                         </div>
                 </section>
-                <section className="cards-container" style={{marginTop:'5rem'}}>
+                <section className="cards-container" style={{marginTop:'7rem'}}>
                     <p className="home-title2">Contacto</p>
                     <div className="contact-container">
                         <div className="map-container">

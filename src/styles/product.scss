@@ -48,18 +48,26 @@
         }
 
         .button {
-            background-color: #418fde;
-            color: #f4f5f5;
+            background-color: #4BD2DC;
+            color: #ffff;
             font-weight: 600;
             font-size: 15px;
             border:none;
             border-radius: 12px;
             padding: 6px 25px;
             cursor: pointer;
-            margin-top: 10%;
-            height: 7%;
+            margin-top: 20px;
+            height: 40px;
             outline: none;
-        
+            &.outline{
+                margin-top: 10px;
+                background-color: #fff;
+                color: #4BD2DC;
+                &:hover,
+                &:active{
+                    background-color: #f7f7f7;
+                }
+            }
         }
     }
 }

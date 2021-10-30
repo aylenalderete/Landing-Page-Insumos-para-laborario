@@ -1,4 +1,7 @@
 import '../../styles/GeneralComponents/card.scss'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { useState } from 'react'
 
 const Card = ({
     img = '',
@@ -12,6 +15,8 @@ const Card = ({
     buttons = [],
     imgStyle = {},
 }) => {
+    const [loadingImg, setLoadingImg] = useState(true)
+
     const renderDescription = (text) => {
         let element;
         text = description.length > descriptionMaxLength ? text.slice(0, 50) : text
@@ -25,7 +30,15 @@ const Card = ({
         <div key={key} className="card__container" style={style} onClick={cardAction}>
             {img && (
                 <div className="card__img--container">
-                    <img style={imgStyle} src={img} alt='Imagen'/>
+                    {loadingImg && (
+                        <Skeleton style={{height: '125px'}} />
+                    )}
+                    <img 
+                        onLoad={() => setLoadingImg(false)}
+                        style={{...imgStyle, height: loadingImg && '0'}} 
+                        src={img} 
+                        alt='Imagen'
+                    />
                 </div>
             )}
             {title && (

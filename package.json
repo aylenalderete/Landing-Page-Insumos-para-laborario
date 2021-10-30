@@ -8,10 +8,12 @@
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.0.1",
     "infinite-react-carousel": "^1.2.11",
+    "node-sass": "^6.0.1",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.8.0",
+    "react-loading-skeleton": "^3.0.1",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
@@ -24,10 +26,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase deploy --only hosting:maklab"    
+    "deploy": "yarn build && firebase deploy --only hosting:maklab",
+    "dev": "webpack serve",
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": [

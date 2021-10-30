@@ -3,8 +3,16 @@
     height: 100%;
 
     .layout__header {
-        position: absolute;
-       
+        &.absolute{
+            position: absolute;
+        }
+        &.relative{
+            position: relative;
+            .layout__header--iconContainer{
+                margin-top: 0;
+            }
+        }
+        
         .layout__header--SearchBarContainer{
             input{
                 background-color: rgb(250, 250, 250);

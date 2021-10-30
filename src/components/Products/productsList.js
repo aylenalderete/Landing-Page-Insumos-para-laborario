@@ -3,14 +3,14 @@ import Card from "../GeneralComponents/card";
 import { Grid } from "../GeneralComponents/layout";
 import Loading from "../GeneralComponents/loading";
 import {getAllProducts} from '../../database/product'
-import { useHistory, useLocation, Link} from "react-router-dom"
+import { useHistory, useLocation} from "react-router-dom"
 import queryString from 'query-string';
-import { filterItems, filterSearchBar } from "./filterUtils";
+// import { filterItems, filterSearchBar } from "./filterUtils";
 import '../../styles/productList.scss'
 
 const ProductsList = ({maxItems}) => {
     const [products, setProducts] = useState([])
-    const [productsFiltered, setProductsFiltered] = useState({ideal: [], size: [], weight: [], sensation: []})
+    const [productsFiltered] = useState({ideal: [], size: [], weight: [], sensation: []})
     const [loading, setLoading] = useState(true)
     const history = useHistory()
     const location = useLocation()
@@ -20,18 +20,18 @@ const ProductsList = ({maxItems}) => {
     useEffect(() => {
         getAllProducts()
         .then((prods) => {
-            if (params.filterSteps){
-                const itemsFiltered = filterItems(prods, {size: params.size, weight: params.weight, sensation: params.sensation})                        
-                setProductsFiltered(itemsFiltered)
-                setLoading(false)
-            } else if (params.search) {
-                const itemsFiltered = filterSearchBar(prods, params.search)            
-                setProducts(itemsFiltered)
-                setLoading(false)
-            } else {
+            // if (params.filterSteps){
+            //     const itemsFiltered = filterItems(prods, {size: params.size, weight: params.weight, sensation: params.sensation})                        
+            //     setProductsFiltered(itemsFiltered)
+            //     setLoading(false)
+            // } else if (params.search) {
+            //     const itemsFiltered = filterSearchBar(prods, params.search)            
+            //     setProducts(itemsFiltered)
+            //     setLoading(false)
+            // } else {
                 setLoading(false)
                 setProducts(prods)
-            }
+            // }
         })
         .catch((error) => setLoading(false))
     }, [params.filterSteps, params.search, params.size, params.weight, params.sensation])
@@ -85,19 +85,14 @@ const ProductsList = ({maxItems}) => {
                     {products
                         .slice(0, maxItems)
                         .map((el) => (
-                            <div onClick={() => history.push(`/product/${el.doc_id}`)} style={{textAlign:'center', fontSize: '1.1rem', color: '#585858'}}>
-                                <img style={{width: '220px'}} alt="imagen" src={el.images[0]}/>
-                                <p>{el.nombre}</p>
-                            </div>
-                            // <Card 
-                            //     imgStyle={{width: '220px'}}
-                            //     style={{width: '220px', textAlign: 'center'}}
-                            //     cardAction={() => history.push(`/product/${el.doc_id}`)}
-                            //     key={el.doc_id}
-                            //     img={el.images}
-                            //     title={el.nombre}
-                            //     price={el.variants[0].price}
-                            // />
+                            <Card 
+                                imgStyle={{width: '220px'}}
+                                style={{width: '220px', textAlign: 'center'}}
+                                cardAction={() => history.push(`/product/${el.doc_id}`)}
+                                key={el.doc_id}
+                                img={el.images}
+                                title={el.nombre}
+                            />
                         ))}
                 </Grid>
             )}

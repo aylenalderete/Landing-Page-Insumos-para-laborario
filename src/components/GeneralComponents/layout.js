@@ -1,45 +1,20 @@
 import { Link } from 'react-router-dom';
 import Icono from '../../assets/image 39.png'
 import '../../styles/GeneralComponents/layout.scss'
-import { useState } from 'react';
 import WhatsappButton from './whatsappButton';
-import { useHistory } from "react-router";
-import { useSelector } from 'react-redux';
-
 
 const Layout = ({
     icon = true,
     searchBar = true,
     nav = true,
     children = <h2>pasale el children gil</h2>,
+    headerPosition = 'absolute',
     footer = true
 }) => {
-    const {isLogged} = useSelector(state => state.user)
-    const [inputValue, setInputValue] = useState('')
-    const [burgerStatus, setBurgerStatus] = useState({active: false, open: false})    
-    const history = useHistory()
-
-
-    const handleKeyDown = ({ keyCode }) => {
-        if (keyCode !== 13) return null;
-        else {     
-            history.push(`/productos?search=${inputValue}`)
-        }
-    };
-
-    const burgerOpen = (open) => {
-        if(open){
-            setBurgerStatus({...burgerStatus, active: true})
-            setTimeout(() => setBurgerStatus({active: true, open: true}), 100)
-        } else {
-            setBurgerStatus({...burgerStatus, open: false})
-            setTimeout(() => setBurgerStatus({open: false, active: false}), 100)
-        }
-    }
 
     return (
         <main className="layout__main">
-            <header className='layout__header'>
+            <header className={`layout__header ${headerPosition}`}>
                 {icon && (
                     <div className="layout__header--iconContainer">
                         <Link to='/'>
