@@ -6,7 +6,7 @@ import { useState } from 'react'
 const Card = ({
     img = '',
     title = '',
-    key='',
+    keyProp='',
     description = '',
     descriptionMaxLength = 50,
     price = '',
@@ -25,9 +25,9 @@ const Card = ({
         }
         return element;
     }
-
+    
     return (
-        <div key={key} className="card__container" style={style} onClick={cardAction}>
+        <div key={keyProp} className="card__container" style={style} onClick={cardAction}>
             {img && (
                 <div className="card__img--container">
                     {loadingImg && (

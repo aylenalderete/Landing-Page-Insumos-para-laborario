@@ -55,21 +55,17 @@ const ProductsList = ({maxItems}) => {
                 </div>
                 <Grid height='17rem'>
                     {productsFiltered[type].map((el) => (
-                        <div onClick={() => history.push(`/product/${el.doc_id}`)} style={{textAlign:'center', fontSize: '1.1rem', color: '#585858'}}>
-                            <img style={{width: '220px'}} alt="imagen" src={el.images[0]}/>
-                            <p>{el.nombre}</p>
-                        </div>
-                        // <Card
-                        //     imgStyle={{width: '220px'}}
-                        //     style={{width: '220px', textAlign: 'center'}}
-                        //     description={el.propDescription} 
-                        //     descriptionMaxLength={el.propDescription.length}
-                        //     cardAction={() => history.push(`/product/${el.doc_id}`)}
-                        //     key={el.doc_id}
-                        //     img={el.images[0]}
-                        //     title={el.nombre}
-                        //     price={el.variants[0].price}
-                        // />
+                        <Card
+                            imgStyle={{width: '220px'}}
+                            style={{width: '220px', textAlign: 'center'}}
+                            description={el.propDescription} 
+                            descriptionMaxLength={el.propDescription.length}
+                            cardAction={() => history.push(`/product/${el.doc_id}`)}
+                            key={el.doc_id}
+                            img={el.images[0]}
+                            title={el.nombre}
+                            price={el.variants[0].price}
+                        />
                     ))}
                 </Grid>
             </div>
@@ -84,12 +80,13 @@ const ProductsList = ({maxItems}) => {
                 <Grid height='22rem'>
                     {products
                         .slice(0, maxItems)
-                        .map((el) => (
+                        .map((el, i) => (
                             <Card 
+                                key={i}
                                 imgStyle={{width: '220px', height: '124px'}}
                                 style={{width: '220px', textAlign: 'center'}}
                                 cardAction={() => history.push(`/product/${el.doc_id}`)}
-                                key={el.doc_id}
+                                keyProp={el.doc_id}
                                 img={el.images}
                                 title={el.nombre}
                             />

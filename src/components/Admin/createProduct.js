@@ -102,25 +102,6 @@ const ProductForm = () => {
         }
     }
 
-    const selectsHelper = [
-        {
-            label: "Seleccionar peso máximo: ",
-            name: 'peso',
-            items: ["40kg","50kg","60kg","75kg","90kg","100kg","110kg","120kg","130kg"]
-        },
-        {
-            label: "Seleccionar sensación: ",
-            name: 'sensacion',
-            items: ["goma espuma","alta densidad","resorte"]
-        }
-    ]
-
-    // const variantSelect =  {
-    //     label: 'Seleccionar medidas: ',
-    //     name: 'medida',
-    //     items: ["1 plaza", "1 plaza y media", "2 plazas", "2 plazas y media"]
-    // }
-
     return (
         <form onSubmit={section === 'create' ? sendData : updateData} className="product--container">
             <div>

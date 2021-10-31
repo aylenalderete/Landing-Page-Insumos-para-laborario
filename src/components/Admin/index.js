@@ -35,6 +35,7 @@ const AdminView = () => {
 
     useEffect(() => {
         auth.onAuthStateChanged((currentUser) => currentUser && loadProducts())
+        //eslint-disable-next-line
     }, [])
 
     const sectionHelper = {

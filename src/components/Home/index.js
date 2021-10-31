@@ -46,22 +46,22 @@ function Home() {
                     <p className="home-title2">Te ofrecemos:</p>
                         <Grid height="13rem" width="18rem">
                             <div className="card-info">
-                                <i class="fas fa-vial icon"></i>
+                                <i className="fas fa-vial icon"></i>
                                 <p className="card-title">Personalización</p>
                                 <p className="card-description">Tubo con logo personalizado en gráfica o etiquetas</p>
                             </div>
                             <div className="card-info">
-                                <i class="far fa-star icon"></i>
+                                <i className="far fa-star icon"></i>
                                 <p className="card-title">Los mejores productos</p>
                                 <p className="card-description">Productos nacionales y envases Flow Pack</p>
                             </div>
                             <div className="card-info">
-                                <i class="fas fa-shipping-fast icon"></i>
+                                <i className="fas fa-shipping-fast icon"></i>
                                 <p className="card-title">A todo el país</p>
                                 <p className="card-description">Despachamos a todo el país</p>
                             </div>
                             <div className="card-info">
-                                <i class="fas fa-comment-dollar icon"></i>
+                                <i className="fas fa-comment-dollar icon"></i>
                                 <p className="card-title">Entrega sin cargo</p>
                                 <p className="card-description">Entrega sin cargo las 24hs (Prov. de Buenos Aires)</p>
                             </div>
@@ -81,7 +81,7 @@ function Home() {
                     <p className="home-title2">Contacto</p>
                     <div className="contact-container">
                         <div className="map-container">
-                            <iframe title='googleMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52627.49588793379!2d-58.56360943362155!3d-34.47198109581098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb03cd891437f%3A0xab3b49e671350275!2sSan%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1635346559521!5m2!1ses!2sar" width="600" height="450" allowfullscreen="" loading="lazy"></iframe> 
+                            <iframe title='googleMap' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52627.49588793379!2d-58.56360943362155!3d-34.47198109581098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb03cd891437f%3A0xab3b49e671350275!2sSan%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1635346559521!5m2!1ses!2sar" width="600" height="450" loading="lazy"></iframe> 
                         </div>
                         <div className="info-container" style={{width: '50%', textAlign: 'center', color: '#646464', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                             
