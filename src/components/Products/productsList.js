@@ -86,7 +86,7 @@ const ProductsList = ({maxItems}) => {
                         .slice(0, maxItems)
                         .map((el) => (
                             <Card 
-                                imgStyle={{width: '220px'}}
+                                imgStyle={{width: '220px', height: '124px'}}
                                 style={{width: '220px', textAlign: 'center'}}
                                 cardAction={() => history.push(`/product/${el.doc_id}`)}
                                 key={el.doc_id}

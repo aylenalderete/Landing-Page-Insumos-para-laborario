@@ -35,7 +35,7 @@ const Card = ({
                     )}
                     <img 
                         onLoad={() => setLoadingImg(false)}
-                        style={{...imgStyle, height: loadingImg && '0'}} 
+                        style={{...imgStyle, height: loadingImg ? '0' : (imgStyle.height || '125px')}} 
                         src={img} 
                         alt='Imagen'
                     />
