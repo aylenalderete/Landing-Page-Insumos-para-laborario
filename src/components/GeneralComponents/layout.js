@@ -4,37 +4,44 @@ import '../../styles/GeneralComponents/layout.scss'
 import WhatsappButton from './whatsappButton';
 
 const Layout = ({
-    icon = true,
-    searchBar = true,
-    nav = true,
-    children = <h2>pasale el children gil</h2>,
-    headerPosition = 'absolute',
-    footer = true
+  icon = true,
+  searchBar = true,
+  nav = true,
+  children = <h2></h2>,
+  headerPosition = "absolute",
+  footer = true,
 }) => {
-
-    return (
-        <main className="layout__main">
-            <header className={`layout__header ${headerPosition}`}>
-                {icon && (
-                    <div className="layout__header--iconContainer">
-                        <Link to='/'>
-                            <img alt='icon' src={Icono} />
-                        </Link>
-                    </div>
-                )}
-            </header>
-            <section className='layout__section'>
-                {children}
-            </section>
-            <div>
-            <WhatsappButton />
-            </div>
-            <footer className='layout__footer'>
-                    <p style={{color:'white'}}>2021 © Hecho por: <a style={{color:'white', textDecoration: 'underline'}} rel='noreferrer' target="_blank" href='https://www.linkedin.com/in/aylenalderete/'>Aylén Alderete</a> </p>
-            </footer>
-        </main>
-    )
-}
+  return (
+    <main className="layout__main">
+      <header className={`layout__header ${headerPosition}`}>
+        {icon && (
+          <div className="layout__header--iconContainer">
+            <Link to="/">
+              <img alt="icon" src={Icono} />
+            </Link>
+          </div>
+        )}
+      </header>
+      <section className="layout__section">{children}</section>
+      <div>
+        <WhatsappButton />
+      </div>
+      <footer className="layout__footer">
+        <p style={{ color: "white" }}>
+          2021 © Hecho por:{" "}
+          <a
+            style={{ color: "white", textDecoration: "underline" }}
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/cristiansmorales/"
+          >
+            Cristian Morales
+          </a>{" "}
+        </p>
+      </footer>
+    </main>
+  );
+};
 
 export default Layout;
 
