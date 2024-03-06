@@ -72,7 +72,7 @@ const ProductForm = () => {
     const sendData = async  (e) => {
         try {
             e.preventDefault()
-            if(productData.variants.length === 0) return alert('Debe agregar al menos una variante')            
+            // if(productData.variants.length === 0) return alert('Debe agregar al menos una variante')            
             if(productData.images.length === 0) return alert('Debe agregar al menos una imagen')
             await createProductDB(productData)
             Swal.fire('Producto creado!', '', 'success')
@@ -110,7 +110,7 @@ const ProductForm = () => {
             <Grid className={'form-container'} >
                 <div className='create_product--section' >
                     <input required value={productData['nombre']} autoComplete='off' name="nombre" onChange={handleInputChange} placeholder="Nombre del producto"></input>
-                    <textarea required value={productData['descripcion']} autoComplete='off' rows='10' name="descripcion" onChange={handleInputChange} placeholder="Descripción del producto"/>
+                    <textarea value={productData['descripcion']} autoComplete='off' rows='10' name="descripcion" onChange={handleInputChange} placeholder="Descripción del producto"/>
                 </div>
                 {/* <div className='create_product--section'>
                     {selectsHelper.map(({items, label, name}) => (
@@ -139,7 +139,7 @@ const ProductForm = () => {
                         ))}
                     </div>
                 </div> */}
-                <div className="create_product--section">
+                {/* <div className="create_product--section">
                     <div className="variant__form">
                         <h5>Precio</h5>
                         <div className="variants__items">
@@ -151,17 +151,17 @@ const ProductForm = () => {
                             </>
                         ))}
                         </div>
-                        {/* <p>{variantSelect.label}</p>
+                        <p>{variantSelect.label}</p>
                         <select name='size' value={variant.size} onChange={handleVariantChange}>
                             <option value='' disabled>Seleccione una opcion</option>
                             {variantSelect.items.map((item) => (
                                 <option key={item} value={item}>{item}</option>
                             ))}
-                        </select>  */}
+                        </select> 
                         <input autoComplete='off' value={variant.price} type='number' name="price" onChange={handleVariantChange} placeholder="Precio"></input>                
                         <button type='button' className='button' onClick={handleAddVariant}>Añadir variante</button>                    
                     </div>
-                </div>
+                </div> */}
                 <div className='create_product--section' >
                     <label className='create_product--section_label' style={{backgroundColor:'#eeeeee', height: '2rem', width:'13rem', borderRadius:'15px', textAlign:'center', alignItems:'center', display:'flex', justifyContent:'center', cursor:'pointer'}}>
                         Subir imagenes 

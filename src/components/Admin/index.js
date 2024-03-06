@@ -1,5 +1,5 @@
 import Layout, { Grid } from "../GeneralComponents/layout";
-import adminSlider from '../../assets/Group 6 (copia2).png'
+import adminSlider from '../../assets/homeHeaderBanner.png'
 import ProductForm from "./createProduct";
 import DeleteProduct from "./deleteProduct";
 import Card from "../GeneralComponents/card";
@@ -104,7 +104,7 @@ const AdminView = () => {
                             <Card 
                                 title={product.nombre}
                                 img = {product.images[0]}
-                                price = {product.variants[0].price}
+                                // price = {product.variants[0].price}
                                 buttons = {[
                                     {label: 'Editar', action: () => editProductHandler(product)},
                                     {label: 'Eliminar', action: () => deleteProductHandler(product)},

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .homeContainer {
 
     .home-title2 {
@@ -7,51 +9,54 @@
         margin: 0px;
         letter-spacing: 2px;
         text-decoration: underline;
-        text-decoration-color: #4BD2DC;
+        text-decoration-color: #FE0000;
         margin-bottom: 0;
     }
-    .homeContainer-img2 {
-        display: none;
-        background-image: url("../../assets/Group 6 (copia).png");
-        .button {
-            background-color: #4BD2DC;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 18px;
-            border:none;
-            border-radius: 13px;
-            padding: 6px 25px;
-            cursor: pointer;
-            height: 10%;
-            outline: none;
+    // .homeContainer-img2 {
+    //     display: none;
+    //     background-image: url("../../assets/homeHeaderBanner.png");
+    //     .button {
+    //         background-color: #FE0000;
+    //         color: #ffffff;
+    //         font-weight: 600;
+    //         font-size: 18px;
+    //         border:none;
+    //         border-radius: 13px;
+    //         padding: 6px 25px;
+    //         cursor: pointer;
+    //         height: 10%;
+    //         outline: none;
         
-        }
-    }
+    //     }
+    // }
     .homeContainer-img {
-        width: 100%;
-        display: flex;
-        text-align: center;
-        color: white;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 650px;
-        letter-spacing: 2px;
-        background-image: url("../../assets/Group 6.png");
-
-        .button {
-            background-color: #4BD2DC;
+        position: relative;
+        height: 30vw;
+        .desk-banner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+        .mobile-banner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            display: none
+        }
+        .homeHeader-conoceNuestrosProductosButton {
+            position: absolute;
+            left: 60px;
+            bottom: 30px;
+            font-weight: 300;
+            font-size: 25px;
+            font-family: 'Poppins', sans-serif;
             color: #ffffff;
-            font-weight: 600;
-            font-size: 18px;
-            border:none;
-            border-radius: 13px;
-            padding: 6px 25px;
             cursor: pointer;
-            height: 10%;
-            outline: none;
-        
+            text-decoration: underline;
         }
     }
     .cards-container {
@@ -77,7 +82,7 @@
             margin-top: 0px;
             margin-bottom: 3%;
             text-decoration: underline;
-            text-decoration-color: #4BD2DC;
+            text-decoration-color: #FE0000;
             margin-bottom: 0;
         }
 
@@ -107,7 +112,7 @@
             text-align: center;
 
             .icon {
-                color:#4BD2DC;
+                color:#FE0000;
                 font-size: 40px;
             }
 
@@ -129,7 +134,7 @@
         }
 
         .button {
-            background-color: #4BD2DC;
+            background-color: #FE0000;
             color: #ffffff;
             font-weight: 600;
             font-size: 18px;
@@ -144,23 +149,13 @@
     }
 }
 
-@media only screen and (min-width: 1800px) {
-    .homeContainer {
-        .homeContainer-img {
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 1237px;
-        }
-    }
-}
-
 @media only screen and (max-width: 1024px) {
     .homeContainer {
-        .homeContainer-img {
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 31rem;
-        }
+        // .homeContainer-img {
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     height: 31rem;
+        // }
         .cards-container {
             .contact-container {
                 display: flex;
@@ -192,7 +187,18 @@
             letter-spacing: 2px;
         }
         .homeContainer-img{
-            display: none;
+            height: 40vw;
+            .desk-banner {
+                display: none;
+            }
+            .mobile-banner {
+                display: block;
+            }
+            .homeHeader-conoceNuestrosProductosButton {
+                left: 10px;
+                bottom: -35px;
+                font-size: 14px;
+            }
         }
         .cards-container {
             .contact-container {
@@ -214,16 +220,16 @@
 @media only screen and (max-width: 650px) {
     .homeContainer {
     
-    .homeContainer-img2 {
-        background-size: contain;
-        background-repeat: no-repeat;
-        font-size: 12px;
-        display: flex;
-        height: 27rem;
-        .button {
-            font-size: 12px;
-        }
-    }
+    // .homeContainer-img2 {
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     font-size: 12px;
+    //     display: flex;
+    //     height: 27rem;
+    //     .button {
+    //         font-size: 12px;
+    //     }
+    // }
     .cards-container {
         .contact-container {
             .info-container {
@@ -234,15 +240,15 @@
     }
 }
 
-@media only screen and (max-width: 425px) {
-.homeContainer .homeContainer-img2 {
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-size: 11px;
-    display: flex;
-    height: 18rem;
-    .button {
-        font-size: 12px;
-    }
-}
-}
+// @media only screen and (max-width: 425px) {
+// .homeContainer .homeContainer-img2 {
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     font-size: 11px;
+//     display: flex;
+//     height: 18rem;
+//     .button {
+//         font-size: 12px;
+//     }
+// }
+// }

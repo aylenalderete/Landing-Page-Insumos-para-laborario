@@ -52,7 +52,7 @@ export const getDocument = async (path) => {
 
 export const getCollection = async (path) => {
     try {
-        return (await db.collection(normalizePath(path)).get()).docs.map(el => ({...el.data(), doc_id: el.id}))
+        return (await db.collection(normalizePath(path)).get()).docs.map(el => ({...el.data(), doc_id: el.id})).sort(((a, b) => (b.order || 0) - (a.order || 0)))
     } catch (err) {
         alert(err)
         console.error(err)

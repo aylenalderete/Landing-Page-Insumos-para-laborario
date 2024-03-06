@@ -1,2 +1,2 @@
-export const web_id = 'maklab'
-export const web_name = 'MakLab'
+export const web_id = 'dynlab'
+export const web_name = 'DYNLab'

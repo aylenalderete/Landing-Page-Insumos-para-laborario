@@ -22,7 +22,7 @@ function Product() {
     }, [])
 
     const handleClick = () => {
-        window.location.assign(`https://api.whatsapp.com/send?phone=+5491169684589&text=Hola!%20Estoy%20interesado/a%20en%20este%20producto:%20${product.nombre}`);
+        window.location.assign(`https://api.whatsapp.com/send?phone=5491165841050&text=Hola!%Me%interesa%20éste%20producto:%20${product.nombre}`);
     }
 
     return (

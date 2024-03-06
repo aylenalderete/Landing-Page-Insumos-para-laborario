@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import Icono from '../../assets/image 39.png'
+// import Icono from '../../assets/image 39.png'
 import '../../styles/GeneralComponents/layout.scss'
 import WhatsappButton from './whatsappButton';
+import { Helmet } from 'react-helmet';
 
 const Layout = ({
   icon = true,
@@ -13,14 +14,26 @@ const Layout = ({
 }) => {
   return (
     <main className="layout__main">
+      <Helmet>
+        <title>DYNLAB</title>
+        <meta
+          name='description'
+          content='Venta de artículos e insumos descartables para la industria, la mejor calidad y con envíos a todo el pais'
+        />
+        <meta
+          name='keywords'
+          content='dynlab,lab,insumos descartables,placa de petri,frasco recolector,tips,tubo 12x56,tubo criovial,hisopos envasados'
+        />
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
+      </Helmet>
       <header className={`layout__header ${headerPosition}`}>
-        {icon && (
+        {/* {icon && (
           <div className="layout__header--iconContainer">
             <Link to="/">
               <img alt="icon" src={Icono} />
             </Link>
           </div>
-        )}
+        )} */}
       </header>
       <section className="layout__section">{children}</section>
       <div>
@@ -28,14 +41,14 @@ const Layout = ({
       </div>
       <footer className="layout__footer">
         <p style={{ color: "white" }}>
-          2021 © Hecho por:{" "}
+          2024 © Hecho por:{" "}
           <a
             style={{ color: "white", textDecoration: "underline" }}
             rel="noreferrer"
             target="_blank"
-            href="https://www.linkedin.com/in/cristiansmorales/"
+            href="https://puro.software"
           >
-            Cristian Morales
+            Puro software
           </a>{" "}
         </p>
       </footer>

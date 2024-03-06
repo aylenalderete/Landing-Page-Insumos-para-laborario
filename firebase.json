@@ -8,7 +8,7 @@
   },
   "hosting": {
     "public": "build",
-    "site": "maklab",
+    "site": "dynlab",
     "ignore": [
       "firebase.json",
       "**/.*",
